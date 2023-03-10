@@ -6,7 +6,7 @@ inputs:
     description: The endpoint where your Kubeflow UI is running. 
     required: true
   pull_request_number:
-    description: The number of the Pull Request associated to the pipelines.
+    description: The number of the Pull Request associated to the pipelines that should be deleted.
     required: true
   client_id:
     description: The IAP client id, which was specified when the kubeflow deployment where setup using IAP.
