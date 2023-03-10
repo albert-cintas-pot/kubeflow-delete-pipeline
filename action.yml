@@ -1,0 +1,25 @@
+name: Delete a Kubeflow Pipeline on GKE.
+description: Delete a Kubeflow Pipeline on GKE.
+author: albert-cintas-pot
+inputs:
+  kubeflow_url:
+    description: The endpoint where your Kubeflow UI is running. 
+    required: true
+  pull_request_number:
+    description: The number of the Pull Request associated to the pipelines.
+    required: true
+  client_id:
+    description: The IAP client id, which was specified when the kubeflow deployment where setup using IAP.
+    required: true
+  other_client_id:
+    description: The other IAP client id, configured to be used for Desktop app authentication.
+    required: true
+  other_client_secret:
+    description: The other IAP client secret.
+    required: true
+branding:
+  color: 'blue'
+  icon: 'upload-cloud'
+runs:
+  using: 'docker'
+  image: 'docker://albertcintaspot/kfp-delete:latest'
